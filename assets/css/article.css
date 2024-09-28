@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'SF Pro Display Regular';
+  src: url('../fonts/SF-Pro-Text-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Semi Bold';
+  src: url('../fonts/SF-Pro-Text-Semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Ultra Light';
+  src: url('../fonts/SF-Pro-Text-Ultralight.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Ini akan mencegah adanya scrollbar horizontal */
+}
+
+.article-container {
+  text-align: center;
+  padding: 0 2rem;
+  background-color: #FFFFFF;
+}
+
+.article-content {
+  max-width: 90rem;
+  position: relative;
+  padding: 2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.article-content h1 {
+  color: #000000;
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 36px;
+  text-align: left;
+}
+
+.article-content h3 {
+  color: #66686E;
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 20px;
+}
+
+.article-content h6 {
+  color: #00A58A;
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 14px;
+}
+
+.article-content img {
+  width: 100%;
+}
+
+.article-content p {
+  color: #66686E;
+  font-family: 'SF Pro Display Regular';
+  font-size: 16px;
+}
+
+.content-flex {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.sub-article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .article-content h1 {
+    font-size: 28px;
+  }
+  .article-content h3 {
+    font-size: 18px;
+  }
+}

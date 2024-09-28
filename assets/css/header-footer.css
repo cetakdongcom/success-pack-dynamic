@@ -1,0 +1,195 @@
+@font-face {
+  font-family: 'SF Pro Display Regular';
+  src: url('../fonts/SF-Pro-Text-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Semi Bold';
+  src: url('../fonts/SF-Pro-Text-Semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Ultra Light';
+  src: url('../fonts/SF-Pro-Text-Ultralight.otf') format('opentype');
+}
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Ini akan mencegah adanya scrollbar horizontal */
+}
+
+/* Other styles here */
+
+.header, .hero, .about, .faq, .our-products, .articles, .our-company, .footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 0;
+  background-color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 180px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  font-family: 'SF Pro Display Regular';
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+.footer {
+  padding: 2rem 2rem;
+  color: #FFFFFF;
+  background-color: #003642;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 55px;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer-warehouse {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-warehouse h3 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 18px;
+}
+
+.footer-warehouse p {
+  font-family: 'SF Pro Display Regular';
+  font-size: 18px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact p {
+  color: #FFFFFF;
+  font-family: 'SF Pro Display Regular';
+  font-size: 18px;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  margin: 1rem;
+  padding-top: 2rem;
+  color: #FFFFFF;
+  font-family: 'SF Pro Display Regular';
+  font-size: 15px;
+}
+
+/* Media queries for responsive design */
+
+@media (max-width: 768px) {
+  .header{
+    padding: 2rem;
+  }
+  h2 {
+    font-size: 36;
+  }
+
+  .about, .faq-question span, .footer-links a, .footer-contact p, .footer-bottom p{
+   font-size: 16px;
+  }  
+
+  .logo img {
+    max-width: 100px;
+  }
+
+  .nav ul {
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-contact {
+    gap: 12px;
+  }
+  .footer-contact p{
+    margin: 0;
+  }
+  .footer-left {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+}
+

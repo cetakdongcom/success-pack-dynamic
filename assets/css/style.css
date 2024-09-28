@@ -1,0 +1,620 @@
+@font-face {
+  font-family: 'SF Pro Display Regular';
+  src: url('../fonts/SF-Pro-Text-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Semi Bold';
+  src: url('../fonts/SF-Pro-Text-Semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Ultra Light';
+  src: url('../fonts/SF-Pro-Text-Ultralight.otf') format('opentype');
+}
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Ini akan mencegah adanya scrollbar horizontal */
+}
+
+/* Other styles here */
+
+.header, .hero, .about, .faq, .our-products, .articles, .our-company, .footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 0;
+  background-color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 180px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  font-family: 'SF Pro Display Regular';
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-image: url('../images/hero-background.png');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  color: #fff;
+  text-align: left;
+  border-bottom: 12px solid #FFB800;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 90rem;
+  width: 100%;
+  padding: 2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.hero-tagline {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #FFB800;
+  border-radius: 999px;
+  color: #FFB800;
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 64px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 span {
+  color: #00A58A;
+}
+
+.hero p {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 20px;
+}
+
+.our-products {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #FFFFFF;
+}
+
+.our-products h2 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+.our-products p {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 20px;
+  margin-bottom: 2rem;
+  color: #474747;
+}
+
+.product-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 90rem;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  padding: 2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.product-content img {
+  flex: 1 1 70%;
+  max-width: 70%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.content-card {
+  flex: 1 1 20%;
+  background-color: #D9E3E6;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-card span {
+  font-family: 'SF Pro Display Regular';
+  font-size: 18px;
+  color: #00A58A;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-card h4 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.content-card p {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 16PX;
+  color: #474747;
+}
+
+.about {
+  padding: 4rem 2rem;
+  background-color: #003642;
+}
+
+.about-content {
+  max-width: 90rem;
+  position: relative;
+  padding: 2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+.about-content h4 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 20px;
+  color: #D2D2D2;
+}
+
+.articles {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #FFFFFF;
+}
+
+.articles h2 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+.articles p {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 20px;
+  color: #474747;
+  margin-bottom: 1rem;
+}
+
+.articles-container {
+  max-width: 90rem;
+  position: relative;
+  padding: 2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.article-item {
+  flex: 1 1 calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.article-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%;
+}
+
+.article-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+.article-content h2 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 18px;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.article-content h6 {
+  color: #00A58A;
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 14px;
+}
+
+.article-content p {
+  font-family: 'SF Pro Display Regular';
+  font-size: 16px;
+  line-height: 1.4;
+  color: #66686E;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.our-company {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #FFFFFF;
+}
+
+.our-company h2 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+.our-company p {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 20px;
+  margin-bottom: 2rem;
+  color: #474747;
+}
+
+.company-content {
+  max-width: 90rem;
+  position: relative;
+  padding: 2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+  gap: 2rem;
+}
+
+.company-content img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Other styles here */
+
+.faq {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.faq h2 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+.faq p {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 20px;
+  margin-bottom: 2rem;
+  color: #777;
+}
+
+.faq-content {
+  max-width: 90rem;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  padding: 2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
+  gap: 1rem;
+}
+
+.faq-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #B9CCD0;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: background-color 0.3s;
+}
+
+.faq-item.active {
+  background-color: #003642;
+  color: #fff;
+}
+
+.faq-question {
+  font-family: 'SF Pro Display Regular';
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.faq-question span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.faq-answer {
+  font-family: 'SF Pro Display Ultra Light';
+  margin-top: 1rem;
+  font-size: 16px;
+  color: #555;
+  display: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+  color: #fff;
+}
+
+.faq-item.active .faq-question .icon {
+  content: url("../icons/icon-minus.svg");
+}
+
+.footer {
+  padding: 2rem 2rem;
+  color: #FFFFFF;
+  background-color: #003642;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer-warehouse {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-warehouse h3 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 18px;
+}
+
+.footer-warehouse p {
+  font-family: 'SF Pro Display Regular';
+  font-size: 18px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact p {
+  color: #FFFFFF;
+  font-family: 'SF Pro Display Regular';
+  font-size: 18px;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  margin: 1rem;
+  padding-top: 2rem;
+  color: #FFFFFF;
+  font-family: 'SF Pro Display Regular';
+  font-size: 15px;
+}
+
+/* Media queries for responsive design */
+
+@media (max-width: 768px) {
+  .header{
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 36;
+  }
+
+  .about, .faq-question span, .footer-links a, .footer-contact p, .footer-bottom p{
+   font-size: 16px;
+  }  
+
+  .logo img {
+    max-width: 100px;
+  }
+
+  .nav ul {
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .hero {
+    min-height: 60vh;
+    max-height: 80vh;
+    padding: 1rem 0;
+  }
+
+  .hero-content {
+    padding: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .product-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .product-content, .faq-content, .company-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .about-content h4 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+
+  .product-content img {
+    max-width: 100%;
+  }
+
+  .content-card {
+    padding: 1rem;
+  }
+
+  .article-item {
+    flex: 1 1 100%;
+  }
+
+  .faq-item {
+    padding: 1rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-contact {
+    gap: 12px;
+  }
+  .footer-contact p{
+    margin: 0;
+  }
+  .footer-left {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+}
+
